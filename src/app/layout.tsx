@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Google_Sans_Flex, Google_Sans_Code } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { EVENT } from "@/data/event";
 import { Loader } from "@/components/loader/Loader";
 import { CursorFx } from "@/components/ui/CursorFx";
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
           }}
         />
+        <Analytics />
       </body>
     </html>
   );
